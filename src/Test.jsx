@@ -1,11 +1,10 @@
 import React from 'react'
-import './Test.css'
+import gulnar from './Styles/Test.module.css'
 
 function Test() {
   return (
     <div>
-      
-      <h1 className='salam'>Salam</h1>
+      <h1 className={gulnar.title}>Salam</h1>
     </div>
   )
 }

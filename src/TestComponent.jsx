@@ -108,7 +108,7 @@ function TestComponent() {
   const { count, increase, decrease, reset } = useCounter(0);
   return (
     <div style={{ textAlign: "center", marginTop: "40px" }}>
-      <h2 className="salam">Sayğac: {count}</h2>
+      <h2 className="title">Sayğac: {count}</h2>
       <button onClick={increase}>Artır</button>
       <button onClick={decrease}>Azalt</button>
       <button onClick={reset}>Sıfırla</button>

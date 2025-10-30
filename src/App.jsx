@@ -1,9 +1,18 @@
 import "./App.css";
+import Button from "./Button";
 import Lazyload from "./Lazyload";
+import Loading from "./Loading";
 import Test from "./Test";
 import TestComponent from "./TestComponent";
+import UserList from "./UserList";
+import { useState, useEffect } from "react";
+import AppUseMemo from './AppUseMemo';
+
+const UserListWithLoading = Loading(UserList);
 
 function App() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
   // const ref = useRef(null);
   // const inputRef = useRef(null);
 
@@ -49,11 +58,24 @@ function App() {
 
   // console.log(ref);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setUsers([
+        { id: 1, name: "Gulnar" },
+        { id: 2, name: "Aysel" },
+      ])
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <>
-      <TestComponent />
+      {/* <TestComponent />
       <Lazyload />
       <Test/>
+      <Button/> */}
+      <UserListWithLoading isLoading={loading} users={users} />;
+      <AppUseMemo/>
     </>
   );
 }
