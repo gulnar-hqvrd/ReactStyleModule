@@ -5,14 +5,16 @@ import Loading from "./Loading";
 import Test from "./Test";
 import TestComponent from "./TestComponent";
 import UserList from "./UserList";
-import { useState, useEffect } from "react";
-import AppUseMemo from './AppUseMemo';
+// import { useState, useEffect } from "react";
+import AppUseMemo from "./AppUseMemo";
+import Callback from "./Callback";
+import Formhook from "./Formhook";
 
 const UserListWithLoading = Loading(UserList);
 
 function App() {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [users, setUsers] = useState([]);
+  // const [loading, setLoading] = useState(true);
   // const ref = useRef(null);
   // const inputRef = useRef(null);
 
@@ -58,15 +60,15 @@ function App() {
 
   // console.log(ref);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setUsers([
-        { id: 1, name: "Gulnar" },
-        { id: 2, name: "Aysel" },
-      ])
-      setLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setUsers([
+  //       { id: 1, name: "Gulnar" },
+  //       { id: 2, name: "Aysel" },
+  //     ]);
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []);
 
   return (
     <>
@@ -74,8 +76,11 @@ function App() {
       <Lazyload />
       <Test/>
       <Button/> */}
-      <UserListWithLoading isLoading={loading} users={users} />;
-      <AppUseMemo/>
+      {/* <UserListWithLoading isLoading={loading} users={users} />;
+      <AppUseMemo/> */}
+
+      {/* <Callback /> */}
+      <Formhook/>
     </>
   );
 }
