@@ -9,6 +9,11 @@ import UserList from "./UserList";
 import AppUseMemo from "./AppUseMemo";
 import Callback from "./Callback";
 import Formhook from "./Formhook";
+import ZodForm from "./ZodForm";
+import YupFormikForm from "./YupFormikForm";
+import Axiostest from "./Axiostest";
+import TanStack from './TanStack';
+import TanStackUsers from './TanStackUsers';
 
 const UserListWithLoading = Loading(UserList);
 
@@ -80,7 +85,12 @@ function App() {
       <AppUseMemo/> */}
 
       {/* <Callback /> */}
-      <Formhook/>
+      {/* <Formhook/> */}
+      {/* <ZodForm/> */}
+      {/* <YupFormikForm/> */}
+      {/* <Axiostest /> */}
+      {/* <TanStack/> */}
+      <TanStackUsers/>
     </>
   );
 }
